@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control: max-age=60000" content="public">
+  <meta name="theme-color" content="#317EFB"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- new css separate main css from responsive css-->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="manifest" href="/manifest.json">
+
+  <title>Restaurant Reviews</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1>
+        <a href="/" tabindex="0">Restaurant Reviews</a>
+      </h1>
+    </nav>
+  </header>
+
+  <main id="maincontent">
+
+    <section id="map-container" aria-labelledby="map-aria-description" role="application">
+      <div id="map" aria-labelledby="map-aria-description" role="application"></div>
+      <label id="map-aria-description" class="map-aria-description"> Google map </label>
+    </section>
+
+    <section role="main">
+      <div class="filter-options">
+        <h2 tabindex="0" aria-labelledby="aria-filterresults-label">Filter Results</h2>
+        <label id="aria-filterresults-label" class="aria-label">Section Filter Results</label>
+
+        <div class="filter-selects">
+          <select tabindex="0" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-labelledby="aria-neighborhoods-label">
+            <option value="all">All Neighborhoods</option>
+          </select>
+          <label id="aria-neighborhoods-label" class="aria-label">filter results by neighborhoods</label>
+
+          <select tabindex="0" id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-labelledby="aria-cuisines-label">
+            <option value="all">All Cuisines</option>
+          </select>
+          <label id="aria-cuisines-label" class="aria-label">filter results by cuisines</label>
+        </div>
+      </div>
+
+      <ul tabindex="0" id="restaurants-list" class="lazyload" aria-labelledby="filter-results-list"></ul>
+      <label id="filter-results-list" class="aria-label">Filter Results</label>
+    </section>
+  </main>
+
+  <script type="application/javascript" charset="utf-8" src="js/idb.js"></script>
+  <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
+  <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+  <!-- register service worker here -->
+  <script type="application/javascript" charset="utf-8" src="js/register.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFCrIgiyWQqAuMB8hkJK4Y2QN9kLSs2P0&libraries=places&callback=initMap"></script>
+    <!-- Lazy load images to boost performance -->
+  <script src="lazysizes-gh-pages/lazysizes.min.js" async=""></script>
+
+
+  <footer id="footer" aria-labelledby="aria-footer" tabindex="0">
+    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong>
+    </a> All Rights Reserved.
+  </footer>
+  <label id="aria-footer" class="aria-label">Footer Copyright Statement</label>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+@media only screen and (min-width: 320px) and (max-device-width: 504px) {
+    #restaurants-list li {
+        max-width: 80%;
+    }
+
+    #restaurant-info {
+        width: 100%;
+    }
+
+    #restaurant-img {
+        height: 180px;
+        width: auto;
+    }
+}
+@media only screen and (min-width: 505px) {
+    #restaurants-list li {
+        max-width: 40%;
+    }
+
+    #restaurant-address {
+        font-size: 18pt;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media only screen and (min-width: 900px) {
+    #restaurants-list li {
+        max-width: 300px;
+    }
+}
