@@ -11,6 +11,8 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/responsive.css">
   <link rel="manifest" href="/manifest.json">
+     <!-- Lazy load images to boost performance -->
+  <script src="lazysizes-gh-pages/lazysizes.min.js" async=""></script>
 
   <title>Restaurant Reviews</title>
 </head>
@@ -60,8 +62,9 @@
   <!-- register service worker here -->
   <script type="application/javascript" charset="utf-8" src="js/register.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFCrIgiyWQqAuMB8hkJK4Y2QN9kLSs2P0&libraries=places&callback=initMap"></script>
-    <!-- Lazy load images to boost performance -->
+    <!-- Lazy load images to boost performance
   <script src="lazysizes-gh-pages/lazysizes.min.js" async=""></script>
+  -->
 
 
   <footer id="footer" aria-labelledby="aria-footer" tabindex="0">

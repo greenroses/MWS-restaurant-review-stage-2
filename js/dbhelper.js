@@ -255,6 +255,13 @@ class DBHelper {
       return (`/img/${restaurant.photograph}` + ".jpg");
   }
 
+  static smallImageUrlForRestaurant(restaurant) {
+      if (restaurant.photograph == undefined) {
+            restaurant.photograph = restaurant.id;
+      }
+      return (`/img/${restaurant.photograph}_320` + ".jpg");
+  }
+
   /**
    * Map marker for a restaurant.
    */
